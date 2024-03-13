@@ -34,7 +34,7 @@
 				],
 				"javascript.updateImportsOnFileMove.enabled": "always",
 				"prettier.documentSelectors": [
-					"**/*.{ts, js, html, css, py, scss}"
+					"**/*.{ts, js, html, css, scss}"
 				],
 				"prettier.singleAttributePerLine": true,
 				"prettier.tabWidth": 4,
@@ -149,7 +149,8 @@
 				"ms-python.isort",
 				"davidanson.vscode-markdownlint",
 				"ms-python.debugpy",
-				"redhat.vscode-yaml"
+				"redhat.vscode-yaml",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
