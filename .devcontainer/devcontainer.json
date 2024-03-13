@@ -1,0 +1,156 @@
+{
+	"name": "Python 3.10",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			"VARIANT": "3.10",
+			"INSTALL_NODE": "false"
+		}
+	},
+
+	"runArgs": ["-u", "vscode", "--cap-add=SYS_PTRACE"],
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.fontSize": 16,
+				"editor.fontFamily": "Fira Code",
+				"editor.fontLigatures": true,
+				"editor.lineHeight": 25,
+				"editor.letterSpacing": 0.5,
+				"editor.cursorBlinking": "smooth",
+				"editor.cursorSmoothCaretAnimation": "on",
+				"editor.cursorStyle": "line",
+				"editor.cursorWidth": 3,
+				"editor.renderWhitespace": "all",
+				"editor.codeLens": true,
+				"files.autoSave": "onFocusChange",
+				"gitlens.graph.minimap.additionalTypes": [
+					"localBranches",
+					"stashes",
+					"remoteBranches",
+					"tags"
+				],
+				"javascript.updateImportsOnFileMove.enabled": "always",
+				"prettier.documentSelectors": [
+					"**/*.{ts, js, html, css, py, scss}"
+				],
+				"prettier.singleAttributePerLine": true,
+				"prettier.tabWidth": 4,
+				"prettier.trailingComma": "all",
+				"prettier.useTabs": true,
+				"todo-tree.tree.autoRefresh": true,
+				"todo-tree.highlights.customHighlight": {
+					"WARN": {
+						"foreground": "white",
+						"background": "red",
+						"iconColour": "red",
+						"icon": "alert",
+						"type": "text"
+					},
+					"TODO": {
+						"foreground": "black",
+						"background": "green",
+						"iconColour": "green",
+						"icon": "check",
+						"type": "text"
+					},
+					"FIXME": {
+						"foreground": "black",
+						"background": "red",
+						"iconColour": "red",
+						"icon": "bug"
+					},
+					"REVIEW": {
+						"foreground": "black",
+						"background": "cyan",
+						"iconColour": "lightblue",
+						"icon": "eye"
+					},
+					"HACK": {
+						"foreground": "black",
+						"background": "#FFA500",
+						"iconColour": "orange",
+						"icon": "alert"
+					},
+					"REF": {
+						"foreground": "black",
+						"background": "grey",
+						"iconColour": "grey",
+						"icon": "link",
+						"type": "tag"
+					}
+				},
+				"todo-tree.highlights.defaultHighlight": {
+					"type": "text-and-comment"
+				},
+				"todo-tree.general.tags": [
+					"TODO",
+					"FIXME",
+					"REVIEW",
+					"HACK",
+					"REF",
+					"WARN"
+				],
+				"[javascript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"editor.formatOnSave": true,
+				"editor.formatOnType": true,
+				"git.enableSmartCommit": true,
+				"window.zoomLevel": 1,
+				"[jsonc]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"files.saveConflictResolution": "overwriteFileOnDisk",
+				"black-formatter.importStrategy": "useBundled",
+
+				"python.analysis.autoImportCompletions": true,
+				"python.analysis.typeCheckingMode": "strict",
+				"python.testing.unittestEnabled": true,
+				"python.analysis.inlayHints.pytestParameters": true,
+				"python.analysis.enablePytestSupport": false,
+				"python.analysis.autoFormatStrings": true,
+				"[python]": {
+					"diffEditor.ignoreTrimWhitespace": false,
+					"gitlens.codeLens.symbolScopes": ["!Module"],
+					"editor.defaultFormatter": "ms-python.black-formatter",
+					"editor.formatOnType": true,
+					"editor.wordBasedSuggestions": "off",
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": true,
+						"source.organizeImports": "explicit"
+					}
+				},
+				"pylint.lintOnChange": true,
+				"flake8.showNotifications": "onWarning",
+				"mypy-type-checker.showNotifications": "onWarning",
+				"settingsSync.ignoredSettings": ["-pylint.lintOnChange"],
+				"files.exclude": {
+					"**/.git": false
+				},
+				"workbench.iconTheme": "vscode-icons"
+			},
+			"extensions": [
+				"ms-python.python",
+				"esbenp.prettier-vscode",
+				"Gruntfuggly.todo-tree",
+				"vscode-icons-team.vscode-icons",
+				"ms-python.black-formatter",
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+				"ms-vscode-remote.remote-containers",
+				"njpwerner.autodocs",
+				"streetsidesoftware.code-spell-checker",
+				"ms-python.flake8",
+				"ms-python.vscode-pylance",
+				"ms-python.mypy",
+				"oderwat.indent-rainbow",
+				"ms-python.isort",
+				"davidanson.vscode-markdownlint",
+				"ms-python.debugpy",
+				"redhat.vscode-yaml"
+			]
+		}
+	}
+}
